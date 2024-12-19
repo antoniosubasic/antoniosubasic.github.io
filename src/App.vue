@@ -5,7 +5,7 @@ import Taskbar from './components/Taskbar.vue'
 </script>
 
 <template>
-  <AvailabilityPill :available="true" availableText="Open for Internships" unavailableText="Currently employed" />
+  <AvailabilityPill :available="false" availableText="Open for Internships" unavailableText="Employed for Internship Position 2025" />
   <Intro class="intro" forename="Antonio" surename="Subašić" />
   <p class="bio">A passionate Computer Science student specializing in software development and problem-solving, with a focus on building efficient, scalable applications and crafting innovative digital solutions.</p>
   <Taskbar

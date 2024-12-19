@@ -49,8 +49,8 @@ onMounted(() => {
 }
 
 .pill.unavailable {
-  background-color: #fff0f0;
-  color: #d8000c;
+  background-color: #fff9c4;
+  color: #ff9114;
 }
 
 .dot {
@@ -67,7 +67,7 @@ onMounted(() => {
 }
 
 .dot.unavailable {
-  background-color: #a60005;
+  background-color: #ff9114;
 }
 
 @keyframes expand {
@@ -97,8 +97,8 @@ onMounted(() => {
   }
 
   .pill.unavailable {
-    background-color: #2e0000;
-    color: #ff0d00;
+    background-color: #4e432e;
+    color: #fff59d;
   }
 
   .dot.available {
@@ -106,7 +106,7 @@ onMounted(() => {
   }
 
   .dot.unavailable {
-    background-color: #ff0d00;
+    background-color: #fff59d;
   }
 
   .animate {
