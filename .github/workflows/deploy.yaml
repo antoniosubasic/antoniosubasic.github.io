@@ -1,0 +1,48 @@
+name: 🚀 Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 🦀 Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+          target: wasm32-unknown-unknown
+
+      - name: 📦 Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+        with:
+          key: "wasm32-target"
+
+      - name: 📦 Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+      - name: 🧰 Install trunk
+        run: |
+          cargo install --locked trunk
+          rustup target add wasm32-unknown-unknown
+
+      - name: 🔨 Build
+        run: |
+          trunk build --release
+          touch dist/.nojekyll
+
+      - name: 📤 Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: gh-pages
+          git-config-name: github-actions[bot]
+          git-config-email: github-actions[bot]@users.noreply.github.com
