@@ -3,9 +3,57 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hello Yew</title>
+        <title>Antonio Subašić</title>
+        <link rel="icon" data-trunk href="/favicon.ico" />
         <link data-trunk rel="rust" data-wasm-opt="z" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            @layer base {
+                :root {
+                    color-scheme: light dark;
+                    color: #000;
+                    background-color: #fff;
+                    font-synthesis: none;
+                    text-rendering: optimizeLegibility;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    :root {
+                        color: #fff;
+                        background-color: #000;
+                    }
+                }
+
+                body {
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 100dvh;
+                }
+            }
+
+            @layer utilities {
+                .color-gradient {
+                    background: linear-gradient(
+                        74deg,
+                        #4285f4 0,
+                        #9b72cb 9%,
+                        #d96570 20%,
+                        #d96570 24%,
+                        #9b72cb 35%,
+                        #4285f4 44%,
+                        #9b72cb 50%,
+                        #d96570 56%,
+                        #131314 75%,
+                        #131314 100%
+                    );
+                }
+            }
+        </style>
     </head>
     <body></body>
 </html>
