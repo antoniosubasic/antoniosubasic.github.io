@@ -3,8 +3,33 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Antonio Subašić" />
+        <meta
+            property="og:description"
+            content="Antonio Subašić's portfolio website"
+        />
+        <meta
+            property="og:image"
+            content="https://antoniosubasic.github.io/images/logo-dark.svg"
+        />
+        <meta property="og:image:type" content="image/svg+xml" />
+        <meta property="og:url" content="https://antoniosubasic.github.io" />
         <title>Antonio Subašić</title>
-        <link rel="icon" data-trunk href="/favicon.ico" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/images/logo-light.svg"
+            media="(prefers-color-scheme: light)"
+            sizes="any"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/images/logo-dark.svg"
+            media="(prefers-color-scheme: dark)"
+            sizes="any"
+        />
+        <link data-trunk rel="copy-dir" href="/images" />
         <link data-trunk rel="rust" data-wasm-opt="z" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,5 +40,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link data-trunk rel="css" href="/tailwind.css" />
     </head>
-    <body class="m-0 flex flex-col justify-center items-center min-h-dvh"></body>
+    <body
+        class="m-0 flex flex-col justify-center items-center min-h-dvh"
+    ></body>
 </html>
