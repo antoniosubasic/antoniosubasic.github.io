@@ -1,10 +1,20 @@
 use yew::prelude::*;
 
+mod components;
+use components::availability_pill::AvailabilityPill;
+
 #[function_component]
 fn App() -> Html {
     html! {
-        <div class="min-h-screen bg-gray-100 flex items-center justify-center">
-            <h1 class="text-3xl font-bold text-blue-600">{ "Hello Yew" }</h1>
+        <div class="min-h-screen flex flex-col gap-4 items-center justify-center">
+            <div class="flex flex-col gap-2 items-center">
+                <AvailabilityPill
+                    available={false}
+                    text_available="Open for Internships"
+                    text_unavailable="Employed for Internship Position"
+                    year={2025}
+                />
+            </div>
         </div>
     }
 }
