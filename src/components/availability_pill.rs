@@ -107,7 +107,7 @@ impl Component for AvailabilityPill {
                         ></div>
                     }
                 </div>
-                <span class="text-[1.05rem]">
+                <span class="text-[0.875rem] sm:text-[0.9rem] md:text-base xl:text-[1.05rem]">
                     { if props.available { &props.text_available } else { &props.text_unavailable } }
                     { format!(" {}", props.year) }
                 </span>
