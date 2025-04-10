@@ -12,12 +12,7 @@ fn App() -> Html {
                 [ "flex flex-col gap-8 items-center justify-center" ]
             )}
         >
-            <AvailabilityPill
-                available={false}
-                text_available="Open for Internships"
-                text_unavailable="Employed for Internship Position"
-                year={2025}
-            />
+            <AvailabilityPill available={false} year={2025} />
             <h1
                 class={classes!(
                     [ "text-[2.35rem] sm:text-[2.8rem] md:text-5xl xl:text-6xl" ],

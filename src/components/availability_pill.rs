@@ -3,8 +3,6 @@ use yew::prelude::*;
 
 #[derive(Properties, PartialEq)]
 pub struct AvailabilityPillProps {
-    pub text_available: String,
-    pub text_unavailable: String,
     pub available: bool,
     pub year: u16,
 }
@@ -108,8 +106,8 @@ impl Component for AvailabilityPill {
                     }
                 </div>
                 <span class="text-[0.875rem] sm:text-[0.9rem] md:text-base xl:text-[1.05rem]">
-                    { if props.available { &props.text_available } else { &props.text_unavailable } }
-                    { format!(" {}", props.year) }
+                    { if props.available { "Open" } else { "Employed" } }
+                    { format!(" for Internship Position {}", props.year) }
                 </span>
             </div>
         }
