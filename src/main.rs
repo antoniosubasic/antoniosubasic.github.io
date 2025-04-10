@@ -33,7 +33,7 @@ fn App() -> Html {
                 class={classes!(
                     [ "sm:text-md xl:text-lg" ],
                     [ "max-w-[20rem] sm:max-w-lg md:max-w-2xl xl:max-w-6xl" ],
-                    [ "text-center text-stone-400" ]
+                    [ "text-center text-stone-600 dark:text-stone-400" ]
                 )}
             >
                 {

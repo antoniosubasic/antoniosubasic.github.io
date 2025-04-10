@@ -66,7 +66,7 @@ impl Component for AvailabilityPill {
                     "select-none",
                     "relative",
                     if props.available {
-                        ["bg-green-50", "text-green-700", "dark:bg-green-900", "dark:text-green-300"]
+                        ["bg-green-100", "text-green-600", "dark:bg-green-900", "dark:text-green-300"]
                     } else {
                         ["bg-yellow-100", "text-yellow-600", "dark:bg-yellow-900", "dark:text-yellow-200"]
                     }
@@ -81,7 +81,7 @@ impl Component for AvailabilityPill {
                         "rounded-full",
                         "relative",
                         if props.available {
-                            ["bg-green-700", "dark:bg-green-300"]
+                            ["bg-green-600", "dark:bg-green-300"]
                         } else {
                             ["bg-yellow-600", "dark:bg-yellow-200"]
                         }
