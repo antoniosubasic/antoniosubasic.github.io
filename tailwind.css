@@ -1,9 +1,6 @@
 @layer base {
     :root {
         font-family: "Inter", sans-serif;
-        color-scheme: light dark;
-        color: #000;
-        background-color: #fff;
         font-synthesis: none;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
@@ -24,20 +21,18 @@
         );
     }
 
+    @media (prefers-color-scheme: light) {
+        :root {
+            color: #000;
+            background-color: #fff;
+        }
+    }
+
     @media (prefers-color-scheme: dark) {
         :root {
             color: #fff;
             background-color: #000;
         }
-    }
-
-    body {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100dvh;
     }
 }
 
@@ -64,9 +59,5 @@
         bottom: 6%;
         width: 102%;
         height: 7%;
-    }
-
-    .min-w-dvw-80 {
-        min-width: 80dvw;
     }
 }
