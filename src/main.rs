@@ -2,6 +2,7 @@ use yew::prelude::*;
 
 mod components;
 use components::availability_pill::AvailabilityPill;
+use components::taskbar::Taskbar;
 
 #[function_component]
 fn App() -> Html {
@@ -38,6 +39,13 @@ fn App() -> Html {
                     and crafting innovative digital solutions."
                 }
             </p>
+            <Taskbar
+                socials={vec![
+                    ("https://linkedin.com/in/subasicantonio", "linkedin"),
+                    ("https://github.com/antoniosubasic", "github"),
+                    ("mailto:antonio.subasic.public@gmail.com", "email"),
+                ]}
+            />
         </main>
     }
 }
