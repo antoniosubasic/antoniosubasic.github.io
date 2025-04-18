@@ -54,7 +54,7 @@ impl Component for Taskbar {
                         [ "border-neutral-400", "dark:border-neutral-600" ],
                         [ "flex", "items-center", "justify-center" ],
                         [ "gap-6", "md:gap-10" ],
-                        [ "p-3", "px-5", "md:p-4", "md:px-8" ]
+                        [ "p-4", "px-6" ]
                     )}
                 >
                     {
@@ -69,7 +69,7 @@ impl Component for Taskbar {
                                     <img
                                         src={format!("/images/{}.svg", url.1)}
                                         alt={format!("{} icon", url.1)}
-                                        class="w-6 h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 dark:invert"
+                                        class="w-7 h-7 xl:w-8 xl:h-8 dark:invert"
                                     />
                                 </a>
                             }

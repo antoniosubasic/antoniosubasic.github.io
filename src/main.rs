@@ -16,7 +16,7 @@ fn App() -> Html {
             <AvailabilityPill available={false} year={2025} />
             <h1
                 class={classes!(
-                    [ "text-[2.35rem] sm:text-[2.8rem] md:text-5xl xl:text-6xl" ],
+                    [ "text-[2.5rem] sm:text-[2.8rem] md:text-5xl xl:text-6xl" ],
                     [ "text-center font-medium leading-[1.1]" ]
                 )}
             >

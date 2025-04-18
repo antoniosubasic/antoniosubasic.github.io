@@ -61,7 +61,7 @@
         height: 7%;
     }
 
-    @media screen and (max-height: 615px) {
+    @media screen and (max-height: 650px) {
         .taskbar {
             display: none;
         }

@@ -105,7 +105,7 @@ impl Component for AvailabilityPill {
                         ></div>
                     }
                 </div>
-                <span class="text-[0.875rem] sm:text-[0.9rem] md:text-base xl:text-[1.05rem]">
+                <span class="text-[0.95rem] md:text-base xl:text-[1.05rem]">
                     { if props.available { "Open" } else { "Employed" } }
                     { format!(" for Internship Position {}", props.year) }
                 </span>
