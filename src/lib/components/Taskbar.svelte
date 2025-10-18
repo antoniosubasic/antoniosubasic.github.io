@@ -26,7 +26,7 @@
     class="taskbar bg-white dark:bg-black text-black dark:text-white fixed bottom-5 left-0 z-10 w-full flex justify-center p-3 md:p-4"
 >
     <div
-        class="border rounded-full border-neutral-400 dark:border-neutral-600 flex items-center justify-center gap-6 md:gap-10 p-4 px-6"
+        class="border rounded-full border-neutral-400 dark:border-neutral-600 flex items-center justify-center gap-8 md:gap-10 p-4 px-6"
     >
         {#each socials as social}
             <a
