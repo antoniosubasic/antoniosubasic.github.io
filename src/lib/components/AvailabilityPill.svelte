@@ -15,12 +15,12 @@
         }, 1000);
     });
 
-    const pillClasses = $derived(
+    let pillClasses = $derived(
         available
             ? "bg-green-100 text-green-600 dark:bg-green-900 dark:text-green-300"
             : "bg-yellow-100 text-yellow-600 dark:bg-yellow-900 dark:text-yellow-200"
     );
-    const dotClasses = $derived(
+    let dotClasses = $derived(
         available
             ? "bg-green-600 dark:bg-green-300"
             : "bg-yellow-600 dark:bg-yellow-200"
