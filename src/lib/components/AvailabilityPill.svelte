@@ -6,15 +6,6 @@
 
     let { available, year }: Props = $props();
 
-    let isPulsing: boolean = $state(false);
-    const animationDuration = 1000;
-
-    if (available) {
-        setInterval(() => {
-            isPulsing = !isPulsing;
-        }, animationDuration);
-    }
-
     const pillClasses = $derived(
         available
             ? "bg-green-100 text-green-600 dark:bg-green-900 dark:text-green-300"
@@ -31,10 +22,9 @@
     class="inline-flex items-center px-4 py-2 rounded-full font-medium select-none relative {pillClasses}"
 >
     <div class="inline-block w-2 h-2 mr-2 rounded-full relative {dotClasses}">
-        {#if available && isPulsing}
+        {#if available}
             <div
-                class="absolute w-2 h-2 rounded-full bg-black bg-opacity-40 dark:bg-white dark:bg-opacity-40 animate-ping"
-                style="animation-duration: {animationDuration}ms; animation-iteration-count: 1;"
+                class="absolute w-2 h-2 rounded-full bg-black bg-opacity-40 dark:bg-white dark:bg-opacity-40 ping-animation"
             ></div>
         {/if}
     </div>
@@ -42,3 +32,26 @@
         {available ? "Open" : "Employed"} for Internship Position {year}
     </span>
 </div>
+
+<style>
+    @keyframes ping {
+        0%,
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        40% {
+            transform: scale(2.5);
+            opacity: 0;
+        }
+        40.01%,
+        100% {
+            transform: scale(1);
+            opacity: 0;
+        }
+    }
+
+    .ping-animation {
+        animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+</style>
