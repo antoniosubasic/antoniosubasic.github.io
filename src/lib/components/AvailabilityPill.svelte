@@ -1,10 +1,19 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+
     interface Props {
         available: boolean;
         year: number;
     }
 
     let { available, year }: Props = $props();
+
+    let pingAnimation = $state(false);
+    onMount(() => {
+        setTimeout(() => {
+            pingAnimation = true;
+        }, 1000);
+    });
 
     const pillClasses = $derived(
         available
@@ -24,7 +33,9 @@
     <div class="inline-block w-2 h-2 mr-2 rounded-full relative {dotClasses}">
         {#if available}
             <div
-                class="absolute w-2 h-2 rounded-full bg-black bg-opacity-40 dark:bg-white dark:bg-opacity-40 ping-animation"
+                class="absolute w-2 h-2 rounded-full bg-black bg-opacity-40 dark:bg-white dark:bg-opacity-40"
+                style="opacity: 0;"
+                class:ping-animation={pingAnimation}
             ></div>
         {/if}
     </div>
