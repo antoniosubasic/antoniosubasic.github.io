@@ -16,7 +16,7 @@
     <p
         class="sm:text-md xl:text-lg max-w-[20rem] sm:max-w-lg md:max-w-2xl xl:max-w-6xl text-center text-stone-600 dark:text-stone-400"
     >
-        A passionate Computer Science student specializing in software
+        A passionate computer science student specializing in software
         development and project management, with a focus on building efficient,
         scalable applications and crafting innovative digital solutions.
     </p>
