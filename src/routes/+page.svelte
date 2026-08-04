@@ -5,7 +5,6 @@
 <main
     class="max-w-[23.15rem] sm:max-w-xl md:max-w-3xl xl:max-w-7xl flex flex-col gap-8 items-center justify-center"
 >
-    <AvailabilityPill available={false} year={2026} />
     <h1
         class="text-[2.5rem] sm:text-[2.8rem] md:text-5xl xl:text-6xl text-center font-medium leading-[1.1]"
     >
