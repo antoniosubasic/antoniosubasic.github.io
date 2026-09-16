@@ -1,5 +1,7 @@
 <script lang="ts">
+    import "@fontsource-variable/inter/opsz.css";
     import "../app.css";
+    import interLatin from "@fontsource-variable/inter/files/inter-latin-opsz-normal.woff2?url";
     import logoLight from "$lib/assets/logo-light.svg";
     import logoDark from "$lib/assets/logo-dark.svg";
 
@@ -7,6 +9,13 @@
 </script>
 
 <svelte:head>
+    <link
+        rel="preload"
+        href={interLatin}
+        as="font"
+        type="font/woff2"
+        crossorigin="anonymous"
+    />
     <link
         rel="icon"
         type="image/svg+xml"
